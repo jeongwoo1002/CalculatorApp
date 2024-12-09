@@ -1,0 +1,119 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgeCalculatorActivity">
+
+    <!-- 생년 입력 -->
+    <TextView
+        android:id="@+id/textView_birth_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="출생 연도"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_birth_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="예: 1990"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_birth_year"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- 생월 입력 -->
+    <TextView
+        android:id="@+id/textView_birth_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="출생 월"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_birth_year" />
+
+    <EditText
+        android:id="@+id/editText_birth_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="예: 05"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_birth_month"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- 생일 입력 -->
+    <TextView
+        android:id="@+id/textView_birth_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="출생 일"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_birth_month" />
+
+    <EditText
+        android:id="@+id/editText_birth_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="예: 15"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_birth_day"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- 나이 계산 버튼 -->
+    <Button
+        android:id="@+id/button_calculate_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="만 나이 계산"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/editText_birth_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- 나이 출력 텍스트 -->
+    <TextView
+        android:id="@+id/textView_age_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="만 나이 결과가 여기에 표시됩니다."
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/button_calculate_age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 목록으로 가기 버튼 -->
+    <Button
+        android:id="@+id/backToMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="목록으로 가기"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textView_age_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
